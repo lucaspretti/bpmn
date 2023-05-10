@@ -1,3 +1,7 @@
+const bpmnWrapper = document.getElementById('bpmn-wrapper');
+console.log(bpmnWrapper);
+bpmnWrapper.appendChild(viewer._container);
+
 // Define an array of BPMN XML files
 const bpmnXMLVariables = [
   bpmnXML,
