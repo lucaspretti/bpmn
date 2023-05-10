@@ -5,6 +5,7 @@ const bpmnXMLVariables = [
   bpmnXML
 ];
 
+
 // Define the zoom factor for each step
 const ZOOM_FACTOR = 1.75;
 
