@@ -1,7 +1,3 @@
-const bpmnWrapper = document.getElementById('bpmn-wrapper');
-console.log(bpmnWrapper);
-bpmnWrapper.appendChild(viewer._container);
-
 // Define an array of BPMN XML files
 const bpmnXMLVariables = [
   bpmnXML,
@@ -9,14 +5,16 @@ const bpmnXMLVariables = [
   bpmnXML
 ];
 
-
 // Define the zoom factor for each step
 const ZOOM_FACTOR = 1.75;
 
+// Initialize the viewer variable
+let viewer;
+
 // Loop through the BPMN XML files and create a viewer and controls for each one
 bpmnXMLVariables.forEach((bpmnXML, index) => {
-  // Initialize a new instance of the BpmnJS viewer and set its options
-  const viewer = new BpmnJS({
+  // Set the viewer variable to a new instance of BpmnJS
+  viewer = new BpmnJS({
     container: `#canvas-${index}`, // Set the viewer's container element to the dynamically created canvas element
     keyboard: {
       bindTo: window, // Bind the viewer's keyboard controls to the window object
